@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+/* ===========================================
+   湖北师范大学青鸟工作室算法组官网 · 全局样式
+   设计令牌参考 DESIGN.md
+   =========================================== */
+
+:root {
+  /* 色彩系统 */
+  --color-primary: #1a56db;          /* 湖师蓝 */
+  --color-primary-dark: #1e40af;
+  --color-primary-light: #dbeafe;
+  --color-accent: #7c3aed;           /* 算法紫 */
+  --color-bg-primary: #0a0a0f;
+
+  /* 字体栈（中文系统默认回退） */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+    "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", ui-monospace, "Cascadia Code",
+    Consolas, monospace;
+
+  color-scheme: dark;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 1rem;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-bg-primary);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* 触摸设备隐藏系统光标，由 TargetCursor 接管（仅精确指针设备启用） */
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* 等宽字体类 */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* 自定义滚动条（深色主题） */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(124, 58, 237, 0.35);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(124, 58, 237, 0.55);
+}
+
+/* 文字选中色 */
+::selection {
+  background: rgba(26, 86, 219, 0.4);
+  color: #fff;
+}
+
+/* 尊重「减少动态效果」偏好 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
