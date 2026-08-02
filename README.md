@@ -1,6 +1,6 @@
 # 青鸟工作室 · 算法组
 
-> Bluebird Studio Algorithm Team — 湖北师范大学人工智能与计算机学院
+> Bluebird Studio Algorithm Team
 
 ## 项目简介
 
